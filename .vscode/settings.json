@@ -1,5 +1,8 @@
 {
     "files.associations": {
         "array": "cpp"
+    },
+    "files.exclude": {
+        "*.exe": true
     }
 }

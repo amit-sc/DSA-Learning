@@ -1,12 +1,17 @@
 #include <iostream>
 using namespace std;
 
+void fun(int n)
+{
+    if (n > 0)
+    {
+        fun(n - 1);
+        cout << n << ' ';
+    }
+}
 int main()
 {
-    int arr[] = {1, 27, 85, 46, 27};
-
-    for (int i : arr)
-        cout << i << ' ';
-
+    int x = 3;
+    fun(3);
     return 0;
 }
