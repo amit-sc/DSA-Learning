@@ -1,4 +1,11 @@
-//! ********** Head, Tail & Tree Recursion **********
+//! ********** Types of Recursion **********
+/*
+Head Recursion
+Tail Recursion
+Tree Recursion
+Indirect Recursion
+Nested Recursion
+*/
 
 #include <iostream>
 using namespace std;
@@ -34,10 +41,33 @@ void fun3(int n)
     }
 }
 
+// Indirect Recursion
+void fun4a(int n); // declaration
+void fun4b(int n); // declaration
+
+void fun4a(int n)
+{
+    if (n > 0)
+    {
+        cout << n << ' ';
+        fun4b(n - 1);
+    }
+}
+
+void fun4b(int n)
+{
+    if (n > 1)
+    {
+        cout << n << ' ';
+        fun4a(n / 2);
+    }
+}
+
 int main()
 {
     cout << "\n\nHead Recursion :: ", fun(3);
     cout << "\n\nTail Recursion :: ", fun2(3);
     cout << "\n\nTree Recursion :: ", fun3(3);
+    cout << "\n\nIndirect Recursion :: ", fun4a(20);
     return 0;
 }
