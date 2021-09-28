@@ -63,11 +63,26 @@ void fun4b(int n)
     }
 }
 
+// Nested Recursion
+int fun5(int n)
+{
+    if (n > 100)
+    {
+        return n - 10;
+    }
+    else
+    {
+        return fun5(fun5(n + 11));
+    }
+}
+
 int main()
 {
     cout << "\n\nHead Recursion :: ", fun(3);
     cout << "\n\nTail Recursion :: ", fun2(3);
     cout << "\n\nTree Recursion :: ", fun3(3);
     cout << "\n\nIndirect Recursion :: ", fun4a(20);
+    cout << "\n\nNested Recursion :: ", cout << fun5(95);
+    
     return 0;
 }
