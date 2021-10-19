@@ -1,3 +1,5 @@
+//! ********** Get(), Set(), Max(), Min(), Sum(), Avg() Operations on Array ********** 
+
 #include <iostream>
 using namespace std;
 
@@ -56,7 +58,7 @@ int MIN(struct Array arr)
     return m;
 }
 
-// SUM of all the element of an array
+// Sum of all the element of an array
 int SUM(struct Array arr)
 {
     int sum = 0;
@@ -85,14 +87,12 @@ int AVG(struct Array arr)
 int main()
 {
     struct Array arr = {{2, 3, 4, 5, 6}, 10, 5};
-
     cout << Get(arr, 2) << endl;
     Set(&arr, 4, 1);
     Display(arr);
 
     cout << MAX(arr) << endl;
     cout << MIN(arr) << endl;
-
     cout << SUM(arr) << endl;
     cout << AVG(arr) << endl;
 
