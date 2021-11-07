@@ -45,7 +45,7 @@ void findDuplicateH(struct Array arr)
 
     // step 3 - display the duplicate element
     cout << "\nDuplicate element(s) :: ";
-    for (int k = 0; k < m; k++)
+    for (int k = 0; k <= m; k++)
     {
         if (arr3[k] > 1)
         {
